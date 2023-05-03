@@ -15,9 +15,8 @@ sigmoid <- function(x)
   1 / (1 + exp(-x))
 
 # cost function for a logisic model
-logistic_cost <- function(y, y_hat) {
+logistic_cost <- function(y, y_hat)
   -mean(y * log(y_hat) + (1 - y) * log(1 - y_hat))
-}
 
 # gradient descent
 gradient_descent <- function(X, y, learning_rate, n_iterations) {
@@ -39,7 +38,7 @@ gradient_descent <- function(X, y, learning_rate, n_iterations) {
 X <- cbind(1, hp, wt)
 
 # Reshape the response variable
-y <- matrix(am, length(am), 1)
+y <- matrix(am)
 
 # Set the learning rate and the number of iterations
 learning_rate <- 0.001
